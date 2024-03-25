@@ -14,7 +14,7 @@ struct sim_hash* sim_hash_initialize(int key_size, int val_size){
     hash->full = 0;
     hash->key_size = key_size;
     hash->val_size = val_size;
-    hash->records = (struct record**)malloc(sizeof(void) * hash->size);
+    hash->records = (struct record**)malloc(sizeof(struct record) * hash->size);
     int i;
     for(i = 0; i < 8; i++){
         struct record* rec = (struct record*)malloc(key_size + val_size + sizeof(int));
@@ -57,7 +57,7 @@ int sim_hash_findSlot(struct sim_hash* hash, void* key){
 }
 
 int sim_hash_rebuild(struct sim_hash* hash, int new_size){
-
+    //TODO: implement
 }
 
 void* sim_hash_lookup(struct sim_hash* hash, void* key){

@@ -1,6 +1,6 @@
 CXX = gcc
 CFLAGS = -Wall -g 
-LIBS =
+LIBS = libs/hash/hashtable.c
 TARGET = src/main.c
 MAIN = main
 
